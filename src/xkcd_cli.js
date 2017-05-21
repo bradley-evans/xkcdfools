@@ -123,6 +123,7 @@ TerminalShell.commands['goto'] = function(terminal, subcmd) {
 TerminalShell.commands['sudo'] = function(terminal) {
 	var cmd_args = Array.prototype.slice.call(arguments);
 	cmd_args.shift(); // terminal
+	terminal.print(cmd_args)
 	if (cmd_args.join(' ') == 'make me a sandwich') {
 		terminal.print('Okay.');
 	} else {
@@ -188,11 +189,12 @@ function linkFile(url) {
 
 Filesystem = {
 	'welcome.txt': {type:'file', read:function(terminal) {
-		terminal.print($('<h4>').text('Welcome to the unixkcd console.'));
-		terminal.print('To navigate the comics, enter "next", "prev", "first", "last", "display", or "random".');
+		terminal.print($('<h4>').text('Welcome to the project and resume page for Bradley Evans'));
+		terminal.print('To navigate articles, enter "next", "prev", "first", "last", "display", or "random".');
 		terminal.print('Use "ls", "cat", and "cd" to navigate the filesystem.');
 	}},
 	'license.txt': {type:'file', read:function(terminal) {
+		terminal.print($('<p>').html('This page was built by Bradley Evans for personal use. The following acknowledgements are attached.'));
 		terminal.print($('<p>').html('Client-side logic for Wordpress CLI theme :: <a href="http://thrind.xamai.ca/">R. McFarland, 2006, 2007, 2008</a>'));
 		terminal.print($('<p>').html('jQuery rewrite and overhaul :: <a href="http://www.chromakode.com/">Chromakode, 2010</a>'));
 		terminal.print();
@@ -210,15 +212,18 @@ Filesystem = {
 			'You should have received a copy of the GNU General Public License',
 			'along with this program; if not, write to the Free Software',
 			'Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.'
+			
 		], function(num, line) {
 			terminal.print(line);
 		});
+	}},
+	'resume.txt': {type:'file', read:function(terminal) {
+		terminal.print($('<p>').html('This is currently a placeholder.'));
 	}}
 };
-Filesystem['blog'] = Filesystem['blag'] = linkFile('http://blag.xkcd.com');
-Filesystem['forums'] = Filesystem['fora'] = linkFile('http://forums.xkcd.com/');
-Filesystem['store'] = linkFile('http://store.xkcd.com/');
-Filesystem['about'] = linkFile('http://xkcd.com/about/');
+Filesystem['projects'] = Filesystem['blag'] = linkFile('http://google.com');
+Filesystem['linkedin'] = linkFile('https://www.linkedin.com/in/bfevans');
+Filesystem['github_repos'] = linkFile('https://github.com/bradley-evans/');
 TerminalShell.pwd = Filesystem;
 
 TerminalShell.commands['cd'] = function(terminal, path) {
@@ -295,7 +300,7 @@ TerminalShell.commands['rm'] = function(terminal, flags, path) {
 TerminalShell.commands['cheat'] = function(terminal) {
 	terminal.print($('<a>').text('*** FREE SHIPPING ENABLED ***').attr('href', 'http://store.xkcd.com/'));
 }; 
-
+/* 
 TerminalShell.commands['reddit'] = function(terminal, num) {
 	num = Number(num);
 	if (num) {
@@ -305,7 +310,7 @@ TerminalShell.commands['reddit'] = function(terminal, num) {
 	}
 	terminal.print($('<iframe src="http://www.reddit.com/static/button/button1.html?width=140&url='+encodeURIComponent(url)+'&newwindow=1" height="22" width="140" scrolling="no" frameborder="0"></iframe>'));
 };
-
+ */
 TerminalShell.commands['wget'] = TerminalShell.commands['curl'] = function(terminal, dest) {
 	if (dest) {
 		terminal.setWorking(true);
@@ -322,7 +327,7 @@ TerminalShell.commands['wget'] = TerminalShell.commands['curl'] = function(termi
 		terminal.print("Please specify a URL.");
 	}
 };
-
+/* 
 TerminalShell.commands['write'] =
 TerminalShell.commands['irc'] = function(terminal, nick) {
 	if (nick) {
@@ -338,10 +343,7 @@ TerminalShell.commands['irc'] = function(terminal, nick) {
 		terminal.print('usage: irc <nick>');
 	}
 };
-
-TerminalShell.commands['unixkcd'] = function(terminal, nick) {
-	TerminalShell.commands['curl'](terminal, "http://www.xkcd.com/unixkcd/");
-};
+ */
 
 TerminalShell.commands['apt-get'] = function(terminal, subcmd) {
 	if (!this.sudo && (subcmd in {'update':true, 'upgrade':true, 'dist-upgrade':true})) {
@@ -393,7 +395,6 @@ TerminalShell.commands['man'] = function(terminal, what) {
 	pages = {
 		'last': 'Man, last night was AWESOME.',
 		'help': 'Man, help me out here.',
-		'next': 'Request confirmed; you will be reincarnated as a man next.',
 		'cat':  'You are now riding a half-man half-cat.'
 	};
 	if (!oneLiner(terminal, what, pages)) {
@@ -416,7 +417,7 @@ TerminalShell.commands['locate'] = function(terminal, what) {
 
 Adventure = {
 	rooms: {
-		0:{description:'You are at a computer using unixkcd.', exits:{west:1, south:10}},
+		0:{description:'You are at a computer using reading some engineering student\'s blog.', exits:{west:1, south:10}},
 		1:{description:'Life is peaceful there.', exits:{east:0, west:2}},
 		2:{description:'In the open air.', exits:{east:1, west:3}},
 		3:{description:'Where the skies are blue.', exits:{east:2, west:4}},
@@ -471,7 +472,7 @@ TerminalShell.commands['go'] = Adventure.go = function(terminal, direction) {
 	} else if (!direction) {
 		terminal.print('Go where?');
 	} else if (direction == 'down') {
-		terminal.print("On our first date?");
+		terminal.print("Let\'s keep it professional.");
 	} else {
 		terminal.print('You cannot go '+direction+'.');
 	}
@@ -489,6 +490,8 @@ TerminalShell.commands['light'] = function(terminal, what) {
 		terminal.print('Light what?');
 	}
 };
+
+TerminalShell.commands['startx'] = linkFile('http://google.com');
 
 TerminalShell.commands['sleep'] = function(terminal, duration) {
 	duration = Number(duration);
@@ -509,6 +512,16 @@ TerminalShell.commands['sleep'] = function(terminal, duration) {
 TerminalShell.commands['help'] = TerminalShell.commands['halp'] = function(terminal) {
 	terminal.print('That would be cheating!');
 }; 
+
+TerminalShell.commands['testharness'] = function(terminal) {
+	terminal.print('Outputting test harness information...');
+    jQuery(function($) {
+      $("#rss-feeds").rss("https://bradleyfevans.wordpress.com/feed/", {
+        limit: 1
+      })
+    })
+
+}
 
 TerminalShell.fallback = function(terminal, cmd) {
 	oneliners = {
@@ -542,7 +555,8 @@ TerminalShell.fallback = function(terminal, cmd) {
 		'use the source luke': 'I\'m not luke, you\'re luke!',
 		'serenity': 'You can\'t take the sky from me.',
 		'enable time travel': 'TARDIS error: Time Lord missing.',
-		'ed': 'You are not a diety.'
+		'ed': 'You are not a diety.',
+		'nmap': 'Yeah, no, I\'m not doing that.'
 	};
 	oneliners['emacs'] = 'You should really use vim.';
 	oneliners['vi'] = oneliners['vim'] = 'You should really use emacs.';
@@ -562,8 +576,6 @@ TerminalShell.fallback = function(terminal, cmd) {
 			]));
 		} else if  (cmd == "hint") {
 			terminal.print(randomChoice([
- 				'We offer some really nice polos.',
- 				$('<p>').html('This terminal will remain available at <a href="http://xkcd.com/unixkcd/">http://xkcd.com/unixkcd/</a>'),
  				'Use the source, Luke!',
  				'There are cheat codes.'
  			]));
@@ -594,10 +606,8 @@ $(document).ready(function() {
 		xkcd.get(null, function(data) {
 			if (data) {
 				xkcd.latest = data;
-				$('#screen').one('cli-ready', function(e) {
-					Terminal.runCommand('cat welcome.txt');
-				});
-				Terminal.runCommand('display '+xkcd.latest.num+'/'+pathFilename(xkcd.latest.img));
+				Terminal.runCommand('cat welcome.txt');
+				Terminal.promptActive = true;
 			} else {
 				noData();
 			}

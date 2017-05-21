@@ -1,0 +1,28 @@
+<br />
+====================<br />
+Key Technical Skills<br />
+====================<br />
+<br />
+Programming languages              
+---------------------              
+C / C++       MATLAB                
+Python      VHDL                   
+BASH        Verilog                
+Web languages                      
+    (JS / HTML / CSS, etc)         
+Mathematica                        
+    (Wolfram Language)             
+ 
+Technical skills
+---------------------
+Embedded Systems Design<br />
+AVR programming<br />
+Xilinx-based FPGA system design<br />
+Network Security<br />
+Security Testing<br />
+RF communications<br />
+UNIX Systems Adminstration<br />
+Web design (obviously!)<br />
+<b>Leadership</b><br />
+Technical Communication and Presentation<br />
+<br />

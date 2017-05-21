@@ -8,7 +8,6 @@
  http://www.chromakode.com/
 */
 
-/**** start from http://snippets.dzone.com/posts/show/701 ****/
 // Removes leading whitespaces
 function ltrim(value) {
 	if (value) {
@@ -51,7 +50,7 @@ function entityEncode(str) {
 var TerminalShell = {
 	commands: {
 		help: function help(terminal) {
-			terminal.print($('<h3>help</h3>'));
+			terminal.print($('<u>help</u>:'));
 			cmd_list = $('<ul>');
 			$.each(this.commands, function(name, func) {
 				cmd_list.append($('<li>').text(name));
@@ -109,7 +108,7 @@ var Terminal = {
 		fg_color:			'#FFF',
 		cursor_blink_time:	700,
 		cursor_style:		'block',
-		prompt:				'guest@xkcd:/$ ',
+		prompt:				'guest@evans:/$ ',
 		spinnerCharacters:	['[   ]','[.  ]','[.. ]','[...]'],
 		spinnerSpeed:		250,
 		typingSpeed:		50
@@ -411,6 +410,10 @@ var Terminal = {
 		this.jumpToBottom();
 	},
 	
+	printFromFile: function(filename) {		
+		$.get(filename, function(data) { $('#display').append(data); });
+	},
+
 	processInputBuffer: function(cmd) {
 		this.print($('<p>').addClass('command').text(this.config.prompt + this.buffer));
 		var cmd = trim(this.buffer);
@@ -472,7 +475,9 @@ var Terminal = {
 
 $(document).ready(function() {
 	$('#welcome').show();
+
 	// Kill Opera's backspace keyboard action.
 	document.onkeydown = document.onkeypress = function(e) { return $.hotkeys.specialKeys[e.keyCode] != 'backspace'; };
 	Terminal.init();
+	Terminal.runCommand('motd');
 });

@@ -2,44 +2,82 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
-  <title>guest@xkcd</title>
-  <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/atom.xml" />
-  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.xml" />
+  <title>guest@evans.fyi</title>
 
+  <!--Once you're done peeking, you should consider peeking at my resume.
+      Command is `cat resume.txt`.
+    -->
+  
+  <!--TODO: Favicon -->
+  
   <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
 
   <link rel="stylesheet" type="text/css" href="style.css" media="screen" title="Default" />
 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   
   <!-- MINIFY: -->
   <script type="text/javascript" src="jquery.hotkeys-0.7.9.js"></script>
   <script type="text/javascript" src="jquery.browser.js"></script>
   <script type="text/javascript" src="jquery.konami.js"></script>
   <script type="text/javascript" src="cli.js"></script>
-  <script type="text/javascript" src="xkcd_cli.js"></script>
-  <script type="text/javascript" src="../site_config.js"></script>
-  <!-- TO: <script type="text/javascript" src="xkcd_cli_all.js"></script> -->
+  <script type="text/javascript" src="cli_include.js"></script>  
+  <script type="text/javascript" src="commands.js"></script>
+  
+  <script src="jquery-rss.js"></script>
+  
  </head>
  <body> 
   <div id="pagealert" title="Press any key for next page of text"> --More-- </div>
   <div id="indicators"><span id="alt-indicator">Alt-</span><span id="ctrl-indicator">Ctrl-</span> <span id="scroll-indicator">SCR LOCK</span></div>
-  <div id="screen">
-   <div id="display">
-    <div id="welcome">
-      <h1>unixkcd</h1>
-      <h2>A webcomic of romance, sarcasm, math, and language.</h2>
+
+  <div id="wrapper">
+    <div id="termlinks">
+      <table id="linktable">
+        <tr>
+          <th>[<a href="#" onclick="Terminal.runCommand('cat resume.txt');">education</a>]</th>
+          <th>[<a href="#" onclick="Terminal.runCommand('cat resume.txt');">key skills</a>]</th>
+          <th>[<a href="#" onclick="Terminal.runCommand('cat resume.txt');">experience</a>]</th>
+          <th>[<a href="#" onclick="Terminal.runCommand('cat resume.txt');">awards</a>]</th>
+          <th>[<a href="#" onclick="Terminal.runCommand('cat resume.txt');">major projects</a>]</th>
+        </tr>
+      </table>
     </div>
-    <noscript>
-      <p>Sorry, the CLI requires JavaScript to work. Please turn on JavaScript, or try the <a href="/1/">GUI Interface</a>.</p>
-    </noscript>
-   </div>
-   <div id="bottomline">
-    <span id="inputline"><span id="prompt"></span><span id="lcommand"></span><span id="cursor" >&nbsp;</span><span id="rcommand"></span></span><span id="spinner"></span>
-   </div>
+    <div id ="window">
+     <div id="toolbar">
+       <img src="img/macos-buttons.png" style="height: 60%; margin-top: 4px; margin-bottom: auto; margin-left: 10px">
+     </div>
+     <div id="screen">
+     
+     <div id="display">
+      <noscript>
+        <p>Sorry, the CLI requires JavaScript to work. Please turn on JavaScript.</p>
+      </noscript>
+     </div>
+     <div id="bottomline">
+      <span id="inputline"><span id="prompt"></span><span id="lcommand"></span><span id="cursor" >&nbsp;</span><span id="rcommand"></span></span><span id="spinner"></span>
+     </div>
+    </div>
+    </div>
+
+    <div id="linkbox">
+      good design is as little design as possible.
+      <div id="socialicons">
+        <a href="https://www.linkedin.com/in/bfevans/">
+          <img src="img/linkedin.png"></a>
+        <a href="https://github.com/bradley-evans/">
+          <img src="img/github.png"></a>
+        <img src="img/wordpress.png">
+        <a href='mailt&#111;&#58;br&#97;dle%&#55;9&#45;%65v%61&#37;6&#69;s&#64;mai%&#54;Ci&#37;6E&#97;tor&#46;%6&#51;o&#109;'>
+          <img src="img/email.png"></a>
+      </div>
+      ©2017 bradley f. evans, all rights reserved
+    </div>
   </div>
-  <div id="credit">Art by <a href="http://xkcd.com/about/">Randall Munroe</a>. XKCD CLI by <a href="http://chromakode.com">Chromakode</a>. Original CLI2 by <a href="http://thrind.xamai.ca">Rod McFarland</a>. <a href="http://github.com/chromakode/xkcdfools">Source code</a>.</div>
+
+  <div id="credit">Derived from the <a href="uni.xkcd.com">xkcd CLI</a>, originally released by Randall Munroe. This site is a modification of that original design by Bradley Evans 
+	</a>. XKCD CLI by <a href="http://chromakode.com">Chromakode</a>. Original CLI2 by <a href="http://thrind.xamai.ca">Rod McFarland</a>. <a href="http://github.com/chromakode/xkcdfools">Source code</a>.</div>
  </body>
 </html>
 

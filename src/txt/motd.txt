@@ -1,0 +1,15 @@
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.__&nbsp;<br&nbsp;/>
+&nbsp;&nbsp;_______&nbsp;&nbsp;_______&nbsp;&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;______&nbsp;&nbsp;&nbsp;_/&nbsp;____\__.__.|__|<br&nbsp;/>
+_/&nbsp;__&nbsp;\&nbsp;&nbsp;\/&nbsp;/\__&nbsp;&nbsp;\&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;\&nbsp;/&nbsp;&nbsp;___/&nbsp;&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;__<&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;||&nbsp;&nbsp;|<br&nbsp;/>
+\&nbsp;&nbsp;___/\&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;/&nbsp;__&nbsp;\|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;\\___&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;|&nbsp;&nbsp;\___&nbsp;&nbsp;||&nbsp;&nbsp;|<br&nbsp;/>
+&nbsp;\___&nbsp;&nbsp;>\_/&nbsp;&nbsp;(____&nbsp;&nbsp;/___|&nbsp;&nbsp;/____&nbsp;&nbsp;>&nbsp;/\&nbsp;|__|&nbsp;&nbsp;/&nbsp;____||__|<br&nbsp;/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/&nbsp;&nbsp;\/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\/<br&nbsp;/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Public&nbsp;Access&nbsp;System<br&nbsp;/>
+<br&nbsp;/>
+Welcome&nbsp;guest!<br&nbsp;/>
+<br&nbsp;/>
+New&nbsp;users&nbsp;type&nbsp;`help.`<br&nbsp;/>
+<br&nbsp;/>
+Some&nbsp;helpful&nbsp;starting&nbsp;commands:<br&nbsp;/>
+ls&nbsp;(list&nbsp;files)<br&nbsp;/>
+cat&nbsp;(read&nbsp;text&nbsp;from&nbsp;file)<br&nbsp;/>

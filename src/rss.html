@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>jquery.rss example</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="rss">    
+      <script src="jquery-1.6.4.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+      <script src="jquery-rss.js"></script>
+      <script>
+        jQuery(function($) {
+          $("#rss-feeds").rss("https://bradleyfevans.wordpress.com/feed/", {
+            limit: 1
+          })
+        })
+      </script>
+      <div id="rss-feeds"></div>
+    </div>
+  </body>
+</html>

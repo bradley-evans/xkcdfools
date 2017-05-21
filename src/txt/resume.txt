@@ -1,0 +1,83 @@
+<br />
+<br />
+                +-----------------------------+<br />
+                |      Bradley F. Evans       |<br />
+                +-----------------------------+<br />
+        <i>Electrical Engineering and Computer Security</i><br />
+<br />
+I am an electrical engineer who specializes in embedded systems security.<br />
+I study at the University of California, Riverside, majoring in Electrical<br />
+Engineering and minoring in Computer Science.<br />
+<br />
+Student Veteran (US Marine Corps), inactive US SECRET clearance.<br />
+<br />
+                    ====================<br />
+                    Key Technical Skills<br />
+                    ====================<br />
+<br />
+    Programming languages              Embedded Systems Design<br />
+    ---------------------               AVR<br />
+    C / C++       MATLAB                  Xilinx-based FPGA<br />
+    Python      VHDL                    Network Security<br />
+    BASH        Verilog                 Security Testing<br />
+    Web languages                      RF communications<br />
+        (JS / HTML / CSS, etc)         UNIX Systems Adminstration<br />
+    Mathematica                         Web design (obviously!)<br />
+        (Wolfram Language)             <b>Leadership</b><br />
+                                        Technical Communication<br />
+                                            and Presentation<br />
+<br />
+                   ======================<br />
+                   Education and Training<br />
+                   ======================<br />
+<br />
+    [2013-2015] Riverside City College<br />
+                        Associate of Science, Mathematics and Science<br />
+    [2016-Present] University of California, Riverside<br />
+                        Bachelor of Science, Electrical Engineering <br />
+                        (Expected Graduation: Spring 2018)<br />
+    Prior military training includes:<br />
+        - Formal Schools Instructor Course<br />
+        - Incidental and Advanced Radio Operator Courses (IROC / AROC)<br />
+        - Marine Air Ground Task Force Communications Information Systems<br />
+<br />
+    Note that for the latter two courses I also acted as an instructor.<br />
+<br />
+<br />
+                         ==========<br />
+                         Experience<br />
+                         ==========<br />
+<br />
+    [2016-Present]  Undergraduate Student Researcher  UC-Riverside<br />
+                Researching security topics, including vulnerabilities<br />
+                in CPU instruction sets.<br />
+    [2015]          Undergraduate Research Assistant  UC Riverside<br />
+                Assisted with research in an environmental engineering<br />
+                chemical lab. Research was in nanoparticulate-based<br />
+                oil-filtration systems.<br />
+    [2013-2015]     Technical Support                  Riverside City College<br />
+                Provided technical support to students in the RCC<br />
+                library.<br />
+    [2004-2012]     Field Radio Operator              US Marine Corps<br />
+                Held many positions in the Marine Corps ranging from simple<br />
+                radio operator to communications instructor to assistant<br />
+                communications section chief. Highest rank achieved:<br />
+                Sergeant. Honorable discharge.<br />
+<br />
+                             ======<br />
+                             Awards<br />
+                             ======<br />
+<br />
+            Navy / Marine Corps Achievement Medal<br />
+            Riverside Community College District Chancellor's<br />
+                Award for Academic Excellence<br />
+            Honors Transfer Council of California Academic<br />
+                Achievement Award<br />
+            "Most Creative Design", UCR Wind Turbine Design<br />
+                Competition (Team Award)<br />
+            1st Place, Network Defense Category, 2016 Western<br />
+                Regional Collegiate Cyber Defense Competition<br />
+                (Team Award)<br />
+            2015 Gerard Alexander Monk Memorial Scholarship<br />
+            2016 Google SVA Scholarship<br />
+<br />

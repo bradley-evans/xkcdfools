@@ -1,41 +1,223 @@
 /*
 	CLI 2.0 Stylesheet
-
 	Now dynamic to support changing colours in the configuration.
 */
 
-html, body { height:99%; }
-body { background-color:#000; font-family:"Courier New",Courier,monospace; margin:0 15px; overflow:hidden; padding:0; }
-pre, td, th, p, div { color:#FFF; font-family:"Courier New",Courier,monospace; font-size:1em; }
-div#screen { height:99%; margin:2px; overflow:hidden; padding:0; }
-div, table { margin-bottom:1em; margin-top:0em; }
-pre, td, p { background-color:transparent; }
-code, p, span, td, th { font-size:1em; }
-p, div#display, ul { margin:0; }
-div#screen p, div#screen span, div#screen a { white-space:pre-wrap; }
-div#screen p.error { color:red; }
-div#screen li { list-style:none; }
-div#welcome { display:none; }
-h1, h2 { background-color:#FFF; color:#000; }
-h3 { color:#FFF; text-decoration:underline; margin:5px 0; }
-h4, h5, h6 { text-decoration:none; margin:0; }
-a, a:visited, .linky { color:#FFF; cursor:pointer; font-weight:bold; text-decoration:none; }
-a:hover, span.linky:hover, td.linky:hover { background-color:#FFF; color:#000; } /*you poor IE-using bastards*/
-table { border-collapse:collapse; }
-td { padding:0 1em 0 1em; }
-.stealth { background-color:#000; border:0px; color:#000; color:black; height:0px; width:0px; opacity:0; }
-#cursor { font-weight:normal; background-color:#FFF; color:#000; /*text-decoration:underline;*/ }
-div#pagealert { background-color:#FFF; bottom:0px; bottom:2px; color:#000; left:2px; margin:0; padding:0; position:absolute; text-align:center; visibility:hidden; width:auto; }
-div#indicators { bottom:0px; bottom:2px; left:2px; margin:0; padding:0; position:absolute; text-align:center; }
-div#indicators span { background-color:#FFF; color:#000; display:none; }
-#spinner { margin-left:1em; padding:0; display:none; font-weight:bold; line-height:0px; }
-div#cform { height:1px; left:0; position:absolute; top:0; width:1px; }
-img { color:#FFF; font-size:x-small; } /* for broken images */
-img.comic { background:white; padding:5px; }
-iframe { margin:0; border:none; }
-div.browser { margin:5px 2px; outline:2px solid gray; }
-form#searchform input[type=text] { background-color:#000; border:1px solid #FFF; color:#FFF; font-family:"Courier New",Courier,monospace; width:100px; }
-form#searchform input[type=submit] { background-color:#FFF; border:1px solid #000; color:#000; font-family:"Courier New",Courier,monospace; font-size:1em; }
-div#credit { position:absolute; bottom:0; color:#FFF; font-size:xx-small; opacity:.25; }
-div#credit:hover { opacity:.75; }
-div#credit a { font-size:xx-small; text-decoration:underline; }
+html, body {
+	height:99%;
+}
+body {
+	background-image: url("img/background.jpg");
+	font-family:Consolas, monaco, monospace;
+	margin:0 15px;
+	overflow-x: hidden;
+}
+pre, td, th, p, div {
+	color:#FFF;
+	font-family:Consolas, monaco, monospace;
+	font-size:1em;
+}
+div, table {
+	margin-bottom:0em;
+	margin-top:0em;
+}
+pre, td, p {
+	background-color:transparent;
+		}
+code, p, span, td, th {
+	font-size:1em;
+}
+p, div#display, ul {
+	margin:0;
+}
+div#window {
+	width: 80%;
+	height: 600px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top:5px;
+	background-color:#002b36;
+	border: 0px grey;
+	border-style:groove;
+	border-radius: 5px;
+	opacity: 0.85;
+}
+div#toolbar {
+	height: 25px;
+	width: 100%;
+	background-color: #cfcfcf;
+	padding: 0px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	opacity: 1.0;
+}
+div#screen {
+	padding: 4px;
+	padding-left: 10px;
+	opacity: 1.0;
+	height:566px;
+	overflow-y:scroll;
+}
+div#screen p, div#screen span, div#screen a {
+	white-space:pre-wrap;
+}
+div#screen p.error {
+	color:red;
+}
+div#screen li {
+	list-style:none;
+}
+h1, h2 {
+	background-color:#FFF;
+	color:#000;
+}
+h3 {
+	color:#FFF;
+	text-decoration:underline;
+	margin:5px 0;
+}
+h4, h5, h6 {
+	text-decoration:none;
+	margin:0;
+}
+a, a:visited, .linky {
+	color:#FFF;
+	cursor:pointer;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:hover, span.linky:hover, td.linky:hover {
+	background-color:#FFF;
+	color:#000;
+} /*you poor IE-using bastards*/
+table {
+	border-collapse:collapse;
+}
+td {
+	padding:0 1em 0 1em;
+}
+.stealth {
+	background-color:#000;
+	border:0px;
+	color:#000;
+	color:black;
+	height:0px;
+	width:0px;
+	opacity:0;
+}
+#cursor {
+	font-weight:normal;
+	background-color:#FFF;
+	color:#000;
+/*text-decoration:underline;*/ }
+div#pagealert {
+	background-color:#FFF;
+	bottom:0px;
+	bottom:2px;
+	color:#000;
+	left:2px;
+		margin:0;
+	padding:0;
+	position:absolute;
+	text-align:center;
+	visibility:hidden;
+	width:auto;
+}
+div#indicators {
+	bottom:0px;
+	bottom:2px;
+	left:2px;
+	margin:0;
+	padding:0;
+	position:absolute;
+	text-align:center;
+}
+div#indicators span {
+	background-color:#FFF;
+	color:#000;
+	display:none;
+}
+#spinner {
+	margin-left:1em;
+	padding:0;
+	display:none;
+	font-weight:bold;
+	line-height:0px;
+}
+img {
+	color:#FFF;
+	font-size:x-small;
+} /* for broken images */
+img.comic {
+	background:white;
+	padding:5px;
+}
+iframe {
+	margin:0;
+	border:none;
+}
+div.browser {
+	margin:5px 2px;
+	outline:2px solid gray;
+}
+div#linkbox {
+	height: 75px;
+	width:40%;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	position: static;
+	align-content: center;
+	text-align: center;
+	font-size: x-small;
+}
+div#socialicons {
+	padding: 3px;
+}
+div#socialicons img {
+	max-height: 30px;
+}
+div#socialicons a:hover, span.linky:hover, td.linky:hover, a:visited, .linky {
+	background-color:transparent;
+	color:transparent;
+}
+div#credit {
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	width:100%;
+	bottom:0;
+	color:#FFF;
+	font-size:xx-small;
+	opacity:.25;
+	text-align: center;
+}
+div#credit:hover {
+	opacity:.85;
+}
+div#credit a {
+	font-size:xx-small;
+	text-decoration:underline;
+}
+div#wrapper {
+	margin-bottom: 20%;
+}
+div#termlinks {
+	width: 100%;
+	position: relative;
+	margin-top: 3%;
+	justify-content: center;
+}
+#linktable {
+	align-self: center;
+	margin: 0 auto 0 auto;
+	table-layout: fixed;
+	color: #FFF;
+}
+#linktable th {
+	width: 150px;
+}
+#linktable a, a:visited {
+	width: 150px;
+	color: #FFF;
+}
